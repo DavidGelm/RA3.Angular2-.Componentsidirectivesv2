@@ -9,7 +9,9 @@ import {Component, OnInit} from '@angular/core';
 export class CorreuComponent implements OnInit{
 
   titol: string = 'David';
-
+  titolLength(): number {
+    return this.titol.length;
+  }
 
   constructor() {}
 
