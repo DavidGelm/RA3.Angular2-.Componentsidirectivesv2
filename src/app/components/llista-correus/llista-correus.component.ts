@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {NgClass, NgForOf} from '@angular/common';
+import {NgClass, NgForOf, NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-llista-correus',
-  imports: [NgForOf, NgClass],
+  imports: [NgForOf, NgClass, NgIf],
   templateUrl: './llista-correus.component.html',
   standalone: true,
   styleUrl: './llista-correus.component.css'

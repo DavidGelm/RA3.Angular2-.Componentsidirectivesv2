@@ -2,20 +2,22 @@
 <h1>{{titol}}</h1>
 
 <div *ngFor="let correu of correus">
-  <h2 [ngClass]="{'no-llegit': !correu.llegit}">{{correu.titol}}</h2>
-  <p>{{correu.contingut}}</p>
-  <p>{{correu.correu}}</p>
+  <div *ngIf="!correu.llegit">
+    <h2 [ngClass]="{'no-llegit': !correu.llegit}">{{correu.titol}}</h2>
+    <p>{{correu.contingut}}</p>
+    <p>{{correu.correu}}</p>
+  </div>
 </div>
 <!--Aixo es sense ngFor-->
 <h1>{{titol2}}</h1>
 
-<div>
+<div *ngIf="!correus[0].llegit">
   <h2 [ngClass]="{'no-llegit': !correus[0].llegit}">{{correus[0].titol}}</h2>
   <p>{{ correus[0].contingut}}</p>
   <p>{{ correus[0].correu}}</p>
 </div>
 
-<div>
+<div *ngIf="!correus[1].llegit">
   <h2 [ngClass]="{'no-llegit': !correus[1].llegit}">{{correus[1].titol}}</h2>
   <p>{{correus[1].contingut}}</p>
   <p>{{correus[1].correu}}</p>
