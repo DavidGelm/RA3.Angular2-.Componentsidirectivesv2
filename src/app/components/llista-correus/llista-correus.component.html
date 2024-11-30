@@ -2,21 +2,21 @@
 <h1>{{titol}}</h1>
 
 <div *ngFor="let correu of correus">
-  <h2>{{ correu.titol }}</h2>
-  <p>{{ correu.contingut }}</p>
-  <p>{{ correu.correu }}</p>
+  <h2 [ngClass]="{'no-llegit': !correu.llegit}">{{correu.titol}}</h2>
+  <p>{{correu.contingut}}</p>
+  <p>{{correu.correu}}</p>
 </div>
 <!--Aixo es sense ngFor-->
 <h1>{{titol2}}</h1>
 
 <div>
-  <h2>{{ correus[0].titol }}</h2>
-  <p>{{ correus[0].contingut }}</p>
-  <p>{{ correus[0].correu }}</p>
+  <h2 [ngClass]="{'no-llegit': !correus[0].llegit}">{{correus[0].titol}}</h2>
+  <p>{{ correus[0].contingut}}</p>
+  <p>{{ correus[0].correu}}</p>
 </div>
 
 <div>
-  <h2>{{ correus[1].titol }}</h2>
-  <p>{{ correus[1].contingut }}</p>
-  <p>{{ correus[1].correu }}</p>
+  <h2 [ngClass]="{'no-llegit': !correus[1].llegit}">{{correus[1].titol}}</h2>
+  <p>{{correus[1].contingut}}</p>
+  <p>{{correus[1].correu}}</p>
 </div>
