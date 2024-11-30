@@ -15,6 +15,16 @@ export class LlistaCorreusComponent implements OnInit {
     [{titol: 'Correu 1',contingut:'Primer correu',correu:'pere@gmail.com',llegit:true},
       {titol:'Correu 2',contingut:'Segon correu',correu:'maria@gmail.com',llegit:false}
     ];
-  constructor() {}
+  numero_llegits = 0;
+  numero_no_llegits = 0;
+  constructor() {
+    for (let i = 0; i < this.correus.length; i++) {
+      if (this.correus[i].llegit) {
+        this.numero_llegits++
+      } else {
+        this.numero_no_llegits++
+      }
+    }
+  }
   ngOnInit() {}
 }
