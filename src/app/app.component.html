@@ -6,7 +6,6 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 <style>
   :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
@@ -226,6 +225,8 @@
         </defs>
       </svg>
       <h1>Hello, {{ title }}</h1>
+      <p>Numero lletres: {{contadorLletres}}</p>
+      <button (click)="augmentarcontador()">Augmentar contador titol</button>
       <p>Congratulations! Your app is running. 🎉</p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>

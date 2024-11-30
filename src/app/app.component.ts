@@ -13,4 +13,8 @@ import {LlistaCorreusComponent} from './components/llista-correus/llista-correus
 export class AppComponent {
 
   title = 'ExercicisAngularComponentsDavidGelmaDAM1';
+  contadorLletres = this.title.length;
+  augmentarcontador() {
+    this.contadorLletres++;
+  }
 }
